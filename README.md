@@ -5,7 +5,7 @@ Function after function after function for all things crypto. Just import and us
 ## Installation
 
 - Include the following in the dependencies section of your `package.json` file;
-- `"ejara-crypto-utils": "git+https://github.com/EjaraApp/crypto-utils.git#v0.1.0"
+- `"ejara-crypto-utils": "git+https://github.com/EjaraApp/crypto-utils.git#v0.1.0"`
 
 ## Usage
 
