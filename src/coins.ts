@@ -1,11 +1,11 @@
-import Coin from "./coin.interface";
-import Bitcoin from "./coins/bitcoin";
-import Ethereum from "./coins/ethereum";
-import Near from "./coins/near";
-import Solana from "./coins/solana";
-import Tezos from "./coins/tezos";
-import Tron from "./coins/tron";
-import CoinCode from "./coin_code";
+import Coin from './coin.interface';
+import Bitcoin from './coins/bitcoin';
+import Ethereum from './coins/ethereum';
+import Near from './coins/near';
+import Solana from './coins/solana';
+import Tezos from './coins/tezos';
+import Tron from './coins/tron';
+import CoinCode from './coin_code';
 
 const coins: Map<CoinCode, Coin> = new Map();
 

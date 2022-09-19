@@ -1,4 +1,3 @@
-
 export default interface Coin {
-    validateAddress: (address: string) => boolean,
+  validateAddress: (address: string) => boolean;
 }

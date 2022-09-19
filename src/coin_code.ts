@@ -1,10 +1,10 @@
 enum CoinCode {
-    NEAR,
-    BTC,
-    ETH,
-    XTZ,
-    SOL,
-    TRX,
-};
+  NEAR = 'NEAR',
+  BTC = 'BTC',
+  ETH = 'ETH',
+  XTZ = 'XTZ',
+  SOL = 'SOL',
+  TRX = 'TRX',
+}
 
 export default CoinCode;
