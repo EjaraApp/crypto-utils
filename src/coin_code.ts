@@ -5,6 +5,7 @@ enum CoinCode {
   XTZ = 'XTZ',
   SOL = 'SOL',
   TRX = 'TRX',
+  XLM = 'XLM',
 }
 
 export default CoinCode;
