@@ -4,7 +4,6 @@
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
-  "ejara-crypto-utils": "git+https://github.com/EjaraApp/crypto-utils.git#main",
   "files": [
     "build/src"
   ],
