@@ -15,7 +15,7 @@ coins.set(CoinCode.ETH, new Ethereum());
 coins.set(CoinCode.XTZ, new Tezos());
 coins.set(CoinCode.SOL, new Solana());
 coins.set(CoinCode.TRX, new Tron());
-coins.set(CoinCode.NEAR,new Near());
+coins.set(CoinCode.NEAR, new Near());
 coins.set(CoinCode.XLM, new Stellar());
 
 export default coins;

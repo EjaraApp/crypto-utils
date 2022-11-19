@@ -96,7 +96,6 @@ describe('Detect Address Crypto', () => {
 
   it('Should Not Be Able to Detect Crypto ', () => {
     invalidAddresses.forEach(address => {
-      console.log(address, detectAddressCrypto(address));
       assert.strictEqual(detectAddressCrypto(address), undefined);
     });
   });
