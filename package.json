@@ -33,6 +33,7 @@
     "@taquito/utils": "^14.0.0",
     "bitcoinjs-lib": "^6.0.2",
     "bs58": "^5.0.0",
+    "multicoin-address-validator": "^0.5.11",
     "near-api-js": "^1.0.0",
     "tronweb": "^4.3.0",
     "web3": "^1.8.0"

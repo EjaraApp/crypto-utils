@@ -22,7 +22,14 @@ const correctAddresses = [
     coinCode: CoinCode.SOL,
     address: 'Dtv5oivJLuDtzno4UQGrPQQXcZUy7sm1SDodHcykpU2n',
   },
-  {coinCode: CoinCode.TRX, address: 'TYjYrDy7yE9vyJfnF5S3EfPrzfXM3eehri'},
+  {
+    coinCode: CoinCode.TRX,
+    address: 'TYjYrDy7yE9vyJfnF5S3EfPrzfXM3eehri',
+  },
+  {
+    coinCode: CoinCode.XLM,
+    address: 'GBPT3GVKY727GYXTO6QAEVET3AW3EUVZZCZOCCO5B5PJXRVS3S4GD2AY',
+  },
 ];
 
 const wrongAddresses = [
@@ -43,6 +50,10 @@ const wrongAddresses = [
   {
     coinCode: CoinCode.TRX,
     address: 'bc1qxjth4cj6j2v04s07au935547qk9tzd635hkt3n',
+  },
+  {
+    coinCode: CoinCode.XLM,
+    address: '0x5c862679fB3FF6a3a87A30a8222DF61E7eE8d841',
   },
 ];
 
