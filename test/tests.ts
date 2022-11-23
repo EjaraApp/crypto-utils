@@ -30,6 +30,10 @@ const correctAddresses = [
     coinCode: CoinCode.XLM,
     address: 'GBPT3GVKY727GYXTO6QAEVET3AW3EUVZZCZOCCO5B5PJXRVS3S4GD2AY',
   },
+  {
+    coinCode: CoinCode.BNB,
+    address: 'bnb1r6c0ef2quy870xr8sp9nhagrf07f62sjw9na9j',
+  },
 ];
 
 const wrongAddresses = [
@@ -55,6 +59,10 @@ const wrongAddresses = [
     coinCode: CoinCode.XLM,
     address: '0x5c862679fB3FF6a3a87A30a8222DF61E7eE8d841',
   },
+  {
+    coinCode: CoinCode.BNB,
+    address: 'GBPT3GVKY727GYXTO6QAEVET3AW3EUVZZCZOCCO5B5PJXRVS3S4GD2AY',
+  },
 ];
 
 const invalidAddresses = [
@@ -65,12 +73,13 @@ const invalidAddresses = [
   '0x5c862679fB3FF6a3a87A30a8222DF61E7eE8d84',
   'bc1qxjth4cj6j2v04s07au935547qk9tzd635hkt3',
   '1EPLAsYXSeTKMmn8PFBTBwH1LewHoc8v9',
+  'GBPT3GVKY727GYXTO9nhagrf07f62sjw9na9',
 ];
 
 describe('Validate Address', () => {
   it('Should Validate Address Correctly', () => {
     correctAddresses.forEach(address => {
-      assert(validateAddress(address.coinCode, address.address));
+      return assert(validateAddress(address.coinCode, address.address));
     });
   });
 

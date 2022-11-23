@@ -1,5 +1,5 @@
 import Coin from '../coin.interface';
-const WAValidator = require('multicoin-address-validator');
+const WAValidator = require('@capitual/api-crypto-address-validator');
 
 export default class Stellar implements Coin {
   validateAddress(address: string): boolean {

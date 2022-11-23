@@ -29,6 +29,7 @@
     "typescript": "~4.7.0"
   },
   "dependencies": {
+    "@capitual/api-crypto-address-validator": "^1.13.1",
     "@solana/web3.js": "^1.62.0",
     "@taquito/utils": "^14.0.0",
     "bitcoinjs-lib": "^6.0.2",
