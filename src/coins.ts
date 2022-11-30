@@ -1,5 +1,6 @@
 import Coin from './coin.interface';
 import Binance from './coins/binance';
+import BinanceSmartChain from './coins/binanceSmartChain';
 import Bitcoin from './coins/bitcoin';
 import Ethereum from './coins/ethereum';
 import Near from './coins/near';
@@ -19,5 +20,6 @@ coins.set(CoinCode.TRX, new Tron());
 coins.set(CoinCode.NEAR, new Near());
 coins.set(CoinCode.XLM, new Stellar());
 coins.set(CoinCode.BNB, new Binance());
+coins.set(CoinCode.BSC, new BinanceSmartChain());
 
 export default coins;

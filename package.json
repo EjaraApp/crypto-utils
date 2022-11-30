@@ -36,6 +36,7 @@
     "bs58": "^5.0.0",
     "multicoin-address-validator": "^0.5.11",
     "near-api-js": "^1.0.0",
+    "trezor-address-validator": "^0.4.3",
     "tronweb": "^4.3.0",
     "web3": "^1.8.0"
   }

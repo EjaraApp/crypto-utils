@@ -34,6 +34,10 @@ const correctAddresses = [
     coinCode: CoinCode.BNB,
     address: 'bnb1r6c0ef2quy870xr8sp9nhagrf07f62sjw9na9j',
   },
+  {
+    coinCode: CoinCode.BSC,
+    address: '0x2200eE3efc9f6812E3793D2314371Ebb3AD4Df1D',
+  },
 ];
 
 const wrongAddresses = [
@@ -62,6 +66,10 @@ const wrongAddresses = [
   {
     coinCode: CoinCode.BNB,
     address: 'GBPT3GVKY727GYXTO6QAEVET3AW3EUVZZCZOCCO5B5PJXRVS3S4GD2AY',
+  },
+  {
+    coinCode: CoinCode.BSC,
+    address: 'bnb1r6c0ef2quy870xr8sp9nhagrf07f62sjw9na9j',
   },
 ];
 
