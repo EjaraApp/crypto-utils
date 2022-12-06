@@ -1,8 +1,10 @@
 import Coin from '../coin.interface';
-const TronWeb = require('tronweb');
+const WAValidator = require('trezor-address-validator');
 
 export default class Tron implements Coin {
   validateAddress(address: string): boolean {
-    return TronWeb.utils.crypto.isAddressValid(address);
+    const validTronAddress = WAValidator.validate(address, 'trx');
+    if (!validTronAddress) return false;
+    return validTronAddress;
   }
 }
