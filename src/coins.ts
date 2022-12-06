@@ -1,6 +1,6 @@
 import Coin from './coin.interface';
-import binance_beacon_chain from './coins/binance_beacon_chain';
-import binance_smart_chain from './coins/binance_smart_chain';
+import binanceBeaconChain from './coins/binance_beacon_chain';
+import binanceSmartChain from './coins/binance_smart_chain';
 import Bitcoin from './coins/bitcoin';
 import Ethereum from './coins/ethereum';
 import Near from './coins/near';
@@ -19,7 +19,7 @@ coins.set(CoinCode.SOL, new Solana());
 coins.set(CoinCode.TRX, new Tron());
 coins.set(CoinCode.NEAR, new Near());
 coins.set(CoinCode.XLM, new Stellar());
-coins.set(CoinCode.BNB, new binance_beacon_chain());
-coins.set(CoinCode.BSC, new binance_smart_chain());
+coins.set(CoinCode.BNB, new binanceBeaconChain());
+coins.set(CoinCode.BSC, new binanceSmartChain());
 
 export default coins;
