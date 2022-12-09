@@ -1,5 +1,5 @@
 import Coin from '../coin.interface';
-const WAValidator = require('multicoin-address-validator');
+const WAValidator = require('trezor-address-validator');
 
 export default class Stellar implements Coin {
   validateAddress(address: string): boolean {
