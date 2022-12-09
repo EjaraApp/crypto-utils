@@ -14,7 +14,10 @@ export function validateAddress(coinCode: CoinCode, address: string): boolean {
 
 export function detectAddressCrypto(address: string): CoinCode | undefined {
   for (const [code, coin] of coins.entries()) {
-    if (coin.validateAddress(address)) return code;
+    if (coin.validateAddress(address)) {
+      console.log(`detected ${code}`)
+      return code;
+    }
   }
   return undefined;
 }
