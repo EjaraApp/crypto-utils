@@ -1,10 +1,8 @@
-import Coin from '../coin.interface';
-const WAValidator = require('trezor-address-validator');
+import Coin from '../types/coin.interface';
+import CoinCode from '../types/coin_code';
 
-export default class Tron implements Coin {
-  validateAddress(address: string): boolean {
-    const validTronAddress = WAValidator.validate(address, 'trx');
-    if (!validTronAddress) return false;
-    return validTronAddress;
+export default class Tron extends Coin {
+  constructor(protected _code: CoinCode = CoinCode.TRX) {
+    super(CoinCode.TRX);
   }
 }

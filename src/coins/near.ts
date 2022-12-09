@@ -1,8 +1,12 @@
-import Coin from '../coin.interface';
+import Coin from '../types/coin.interface';
+import CoinCode from '../types/coin_code';
 import {decodeHex} from '../helpers';
 
-export default class Near implements Coin {
-  validateAddress(address: string): boolean {
+export default class Near extends Coin {
+  constructor(protected _code: CoinCode = CoinCode.NEAR) {
+    super(CoinCode.NEAR);
+  }
+  public override validateAddress(address: string): boolean {
     try {
       return (decodeHex(address)?.length ?? 0) === 32;
     } catch (error) {

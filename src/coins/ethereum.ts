@@ -1,10 +1,8 @@
-import Coin from '../coin.interface';
-const WAValidator = require('trezor-address-validator');
+import Coin from '../types/coin.interface';
+import CoinCode from '../types/coin_code';
 
-export default class Ethereum implements Coin {
-  validateAddress(address: string): boolean {
-    const validEthereumAddress = WAValidator.validate(address, 'eth');
-    if (!validEthereumAddress) return false;
-    return validEthereumAddress;
+export default class Ethereum extends Coin {
+  constructor(protected _code: CoinCode = CoinCode.ETH) {
+    super(CoinCode.ETH);
   }
 }
