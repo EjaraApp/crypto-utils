@@ -1,10 +1,8 @@
-import Coin from '../coin.interface';
-const WAValidator = require('trezor-address-validator');
+import Coin from '../types/coin.interface';
+import CoinCode from '../types/coin_code';
 
-export default class BinanceBeaconChain implements Coin {
-  validateAddress(address: string): boolean {
-    const validBinanceBeaconChainAddress = WAValidator.validate(address, 'bnb');
-    if (!validBinanceBeaconChainAddress) return false;
-    return validBinanceBeaconChainAddress;
+export default class BinanceBeaconChain extends Coin {
+  constructor(protected _code: CoinCode = CoinCode.BNB) {
+    super(CoinCode.BNB);
   }
 }

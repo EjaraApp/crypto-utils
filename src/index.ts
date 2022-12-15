@@ -1,23 +1,23 @@
-import Coin from './coin.interface';
-import coins from './coins';
-import CoinCode from './coin_code';
+import Coin from './types/coin.interface';
+import wallet from './wallet';
+import CoinCode from './types/coin_code';
 
 export function validateAddress(coinCode: CoinCode, address: string): boolean {
-  const coin: Coin | undefined = coins.get(coinCode);
+  const coin: Coin | null = wallet.coin(coinCode);
 
-  if (coin === undefined) {
+  if (coin === null) {
     return false;
   }
 
   return coin.validateAddress(address);
 }
 
-export function detectAddressCrypto(address: string): CoinCode | undefined {
-  for (const [code, coin] of coins.entries()) {
+export function detectAddressCryptos(address: string): CoinCode[] {
+  const addressCryptos: CoinCode[] = [];
+  for (const coin of wallet.coins()) {
     if (coin.validateAddress(address)) {
-      console.log(`detected ${code}`)
-      return code;
+      addressCryptos.push(coin.code);
     }
   }
-  return undefined;
+  return addressCryptos;
 }

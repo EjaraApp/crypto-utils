@@ -1,9 +1,14 @@
-import Coin from '../coin.interface';
+import Coin from '../types/coin.interface';
 import * as solanaWeb3 from '@solana/web3.js';
 import {decodeb58} from '../helpers';
+import CoinCode from '../types/coin_code';
 
-export default class Solana implements Coin {
-  validateAddress(address: string): boolean {
+export default class Solana extends Coin {
+  constructor(protected _code: CoinCode = CoinCode.SOL) {
+    super(CoinCode.SOL);
+  }
+
+  public override validateAddress(address: string): boolean {
     try {
       const bsAddress = decodeb58(address);
       if (bsAddress === null) return false;
