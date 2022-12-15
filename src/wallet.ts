@@ -9,6 +9,7 @@ import Stellar from './coins/stellar';
 import Tezos from './coins/tezos';
 import Tron from './coins/tron';
 import CoinCode from './types/coin_code';
+import Dogecoin from './coins/dogecoin';
 
 export class Wallet {
   private readonly coinsMap: Map<CoinCode, Coin> = new Map();
@@ -41,6 +42,8 @@ const wallet: Wallet = new Wallet([
   new Tezos(),
   new Near(),
   new Tron(),
+  new Dogecoin(),
+
 ]);
 
 export default wallet;
