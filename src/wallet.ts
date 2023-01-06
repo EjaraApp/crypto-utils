@@ -43,7 +43,6 @@ const wallet: Wallet = new Wallet([
   new Near(),
   new Tron(),
   new Dogecoin(),
-
 ]);
 
 export default wallet;
