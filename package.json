@@ -1,6 +1,6 @@
 {
   "name": "ejara-crypto-utils",
-  "version": "0.5.0",
+  "version": "0.4.1",
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -32,7 +32,6 @@
     "@solana/web3.js": "^1.62.0",
     "@taquito/utils": "^15.0.0",
     "bs58": "^5.0.0",
-    "near-api-js": "^1.0.0",
     "trezor-address-validator": "^0.4.3"
   }
 }
