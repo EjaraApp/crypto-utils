@@ -15,7 +15,8 @@ export function validateAddress(coinCode: CoinCode, address: string): boolean {
 export function detectAddressCryptos(address: string): CoinCode[] {
   const addressCryptos: CoinCode[] = [];
   for (const coin of wallet.coins()) {
-    if (coin.validateAddress(address)) {
+    const coinScore = coin.validateAddressNumeric(address);
+    if (coinScore >= 50) {
       addressCryptos.push(coin.code);
     }
   }

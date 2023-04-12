@@ -44,6 +44,14 @@ const correctAddresses = [
   },
 ];
 
+const detectAddresses = [
+  ...correctAddresses,
+  {
+    coinCodes: [CoinCode.SOL],
+    address: '5pGTheAGNuToDtDJRosi9RoBnh22RBpaGNpnm11uT4TH',
+  },
+];
+
 const wrongAddresses = [
   {coinCodes: [CoinCode.BTC], address: 'TYjYrDy7yE9vyJfnF5S3EfPrzfXM3eehri'},
   {
@@ -112,8 +120,10 @@ describe('Validate Address', () => {
 
 describe('Detect Address Crypto', () => {
   it('Should Detect Correct Crypto', () => {
-    correctAddresses.forEach(address => {
-      detectAddressCryptos(address.address).forEach(d => {
+    detectAddresses.forEach(address => {
+      const coins = detectAddressCryptos(address.address);
+      assert(coins.length > 0);
+      coins.forEach(d => {
         assert(address.coinCodes.includes(d));
       });
     });
