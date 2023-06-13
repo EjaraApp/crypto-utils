@@ -42,6 +42,11 @@ const correctAddresses = [
     coinCodes: [CoinCode.DOGE],
     address: 'D9pvhnWknRza2HTXhY5WT29D4kvYzTZQAF',
   },
+  {
+    coinCodes: [CoinCode.ADA],
+    address:
+      'addr1q9evp7aqelh4epkacgyeqweqgkvqsl8gdp54mxew5kdvuyhqhuqa6ngy0jrdcnknurcvjgtv4jd84pd7xllgmdz0wtrqgfz5l4',
+  },
 ];
 
 const detectAddresses = [
@@ -86,6 +91,11 @@ const wrongAddresses = [
   {
     coinCodes: [CoinCode.DOGE],
     address: '0x2200eE3efc9f6812E3793D2314371Ebb3AD4Df1D',
+  },
+
+  {
+    coinCodes: [CoinCode.ADA],
+    address: 'GBPT3GVKY727GYXTO6QAEVET3AW3EUVZZCZOCCO5B5PJXRVS3S4GD2AY',
   },
 ];
 
