@@ -10,7 +10,7 @@ const correctAddresses = [
   },
   {coinCodes: [CoinCode.BTC], address: '1EPLAsYXSeTKMmn8PFBTBwH1LewHoc8v9a'},
   {
-    coinCodes: [CoinCode.ETH, CoinCode.BSC],
+    coinCodes: [CoinCode.ETH, CoinCode.BSC, CoinCode.MATIC],
     address: '0x5c862679fB3FF6a3a87A30a8222DF61E7eE8d841',
   },
   {coinCodes: [CoinCode.XTZ], address: 'tz1R5X6pDpoxbMkY4AQJmUhRfEHjYN7dq66E'},
@@ -35,8 +35,12 @@ const correctAddresses = [
     address: 'bnb1r6c0ef2quy870xr8sp9nhagrf07f62sjw9na9j',
   },
   {
-    coinCodes: [CoinCode.BSC, CoinCode.ETH],
+    coinCodes: [CoinCode.BSC, CoinCode.ETH, CoinCode.MATIC],
     address: '0x2200eE3efc9f6812E3793D2314371Ebb3AD4Df1D',
+  },
+  {
+    coinCodes: [CoinCode.MATIC, CoinCode.BSC, CoinCode.ETH],
+    address: '0x0ad6EE633247E130FDAE50d153dB27fCA9Ee1d25',
   },
   {
     coinCodes: [CoinCode.DOGE],
@@ -84,6 +88,10 @@ const wrongAddresses = [
     address: 'bnb1r6c0ef2quy870xr8sp9nhagrf07f62sjw9na9j',
   },
   {
+    coinCodes: [CoinCode.MATIC],
+    address: '5pGTheAGNuToDtDJRosi9RoBnh22RBpaGNpnm11uT4TH',
+  },
+  {
     coinCodes: [CoinCode.DOGE],
     address: '0x2200eE3efc9f6812E3793D2314371Ebb3AD4Df1D',
   },
@@ -99,6 +107,7 @@ const invalidAddresses = [
   '1EPLAsYXSeTKMmn8PFBTBwH1LewHoc8v9',
   'GBPT3GVKY727GYXTO9nhagrf07f62sjw9na9',
   'D9pvhnWknRza2HTXhY5WT29D4kvYzTZwe3',
+  'bc1qxjth4cj6j2v04s07au935547qk9tzd635hkt3',
 ];
 
 describe('Validate Address', () => {
