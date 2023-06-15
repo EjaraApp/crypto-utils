@@ -11,6 +11,7 @@ import Tron from './coins/tron';
 import CoinCode from './types/coin_code';
 import Dogecoin from './coins/dogecoin';
 import Polygon from './coins/polygon';
+import Cardano from './coins/cardano';
 
 export class Wallet {
   private readonly coinsMap: Map<CoinCode, Coin> = new Map();
@@ -45,6 +46,7 @@ const wallet: Wallet = new Wallet([
   new Tron(),
   new Dogecoin(),
   new Polygon(),
+  new Cardano(),
 ]);
 
 export default wallet;
