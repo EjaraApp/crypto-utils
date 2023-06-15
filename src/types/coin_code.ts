@@ -10,6 +10,7 @@ enum CoinCode {
   BSC = 'BSC',
   DOGE = 'DOGE',
   MATIC = 'MATIC',
+  ADA = 'ADA',
 }
 
 export default CoinCode;
