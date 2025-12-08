@@ -12,6 +12,7 @@ import CoinCode from './types/coin_code';
 import Dogecoin from './coins/dogecoin';
 import Polygon from './coins/polygon';
 import Cardano from './coins/cardano';
+import Starknet from './coins/starknet';
 
 export class Wallet {
   private readonly coinsMap: Map<CoinCode, Coin> = new Map();
@@ -47,6 +48,7 @@ const wallet: Wallet = new Wallet([
   new Dogecoin(),
   new Polygon(),
   new Cardano(),
+  new Starknet(),
 ]);
 
 export default wallet;
