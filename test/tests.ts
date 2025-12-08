@@ -51,6 +51,11 @@ const correctAddresses = [
     address:
       'addr1q9evp7aqelh4epkacgyeqweqgkvqsl8gdp54mxew5kdvuyhqhuqa6ngy0jrdcnknurcvjgtv4jd84pd7xllgmdz0wtrqgfz5l4',
   },
+  {
+    coinCodes: [CoinCode.STRK],
+    address:
+      '0x0697c6BF5e0F92C7c0B600D7BA754d637b443e54fBC65B6486DF6e6b942ff7Ef',
+  },
 ];
 
 const detectAddresses = [
@@ -104,6 +109,10 @@ const wrongAddresses = [
   {
     coinCodes: [CoinCode.ADA],
     address: 'GBPT3GVKY727GYXTO6QAEVET3AW3EUVZZCZOCCO5B5PJXRVS3S4GD2AY',
+  },
+  {
+    coinCodes: [CoinCode.STRK],
+    address: '0x5c862679fB3FF6a3a87A30a8222DF61E7eE8d841',
   },
 ];
 
