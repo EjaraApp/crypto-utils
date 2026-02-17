@@ -9,18 +9,26 @@ export default class Starknet extends Coin {
     if (typeof address !== 'string') return false;
 
     try {
-      if (!/^0x/i.test(address)) return false;
-
-      // Must be exactly 66 characters long
-      if (address.length !== 66) return false;
-
-      // Must contain only hex characters after 0x
-      const hexPart = address.slice(2);
-      if (!/^[0-9a-fA-F]{64}$/.test(hexPart)) return false;
-
-      return true;
+      return this.normalizeAddress(address) !== null;
     } catch {
       return false;
     }
+  }
+
+  public normalizeAddress(address: string): string | null {
+    if (typeof address !== 'string') return null;
+
+    if (!address.startsWith('0x')) return null;
+
+    let hex = address.slice(2);
+    if (!/^[0-9a-fA-F]+$/.test(hex)) return null;
+
+    if (hex.length < 60) return null;
+
+    if (hex.length > 64) return null;
+
+    hex = hex.padStart(64, '0');
+
+    return `0x${hex}`;
   }
 }

@@ -53,8 +53,7 @@ const correctAddresses = [
   },
   {
     coinCodes: [CoinCode.STRK],
-    address:
-      '0x0697c6BF5e0F92C7c0B600D7BA754d637b443e54fBC65B6486DF6e6b942ff7Ef',
+    address: '0x371b91453135c5632729e9bc10eede3fc0de523b8b76c5ab3565377b8282c2',
   },
 ];
 
@@ -150,6 +149,7 @@ describe('Detect Address Crypto', () => {
   it('Should Detect Correct Crypto', () => {
     detectAddresses.forEach(address => {
       const coins = detectAddressCryptos(address.address);
+      console.log(address.address, coins);
       assert(coins.length > 0);
       coins.forEach(d => {
         assert(address.coinCodes.includes(d));
